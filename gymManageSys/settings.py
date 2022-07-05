@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 import dj_database_url
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -149,6 +150,6 @@ import django_heroku
 TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
 
 # Configure Django App for Heroku.
-import django_heroku
+
 django_heroku.settings(locals())
 
