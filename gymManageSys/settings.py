@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
-import dj_database_url
 from pathlib import Path
 
 
@@ -88,8 +87,7 @@ DATABASES = {
         'HOST':'localhost',
         'PORT':'',
     }
-}db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+}
 
 WHITENOISE_USE_FINDERS = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -146,8 +144,7 @@ JAZZMIN_SETTINGS={
 LOGIN_REDIRECT_URL='home'
 LOGOUT_REDIRECT_URL='login'
 
-import django_heroku
-TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
+
 
 # Configure Django App for Heroku.
 
