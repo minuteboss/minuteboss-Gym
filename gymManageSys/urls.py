@@ -18,8 +18,8 @@ from django.urls import path,include
 
 urlpatterns = [
     path('',include('main.urls')),
-    path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
-    path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    #path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+    #path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
     path('admin/', admin.site.urls),
     path('accounts/',include('django.contrib.auth.urls')),
 
