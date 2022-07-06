@@ -1,3 +1,3 @@
-web: gunicorn gymManageSys.wsgi:application --log-file - --log-level debug
+web: gunicorn gymManagaSys:application --preload -b 0.0.0.0:5000 
 python manage.py collectstatic --noinput
-manage.py migrate
+python manage.py migrate
