@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-pne&x!)ufxa3lq+ek$h0(gzvq@t0%!7j01-tin!k1j7)ii_zr9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ 'gymManageSys.herokuapp.com']
 
